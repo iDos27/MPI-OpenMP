@@ -1,0 +1,6 @@
+module load mpi/openmpi-x86_64
+// odpala openmpi-x86_64
+mpicxx -o nazwa nazwa.cpp
+//kompilacja
+mpirun -np x ./nazwa
+//odpalenie programu (po -np ilosc procesorow np. 4)
