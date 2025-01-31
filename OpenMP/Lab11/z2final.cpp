@@ -108,6 +108,11 @@ void dzialanieRownolegle(double** mA, double** mF, double* wA, double* wB, doubl
 
 
 int main() {
+    omp_set_num_threads(2);
+    int num_proc = omp_get_num_procs();
+    int max_threads = omp_get_max_threads();
+    cout << "Maksimum: " << max_threads << endl;
+    cout << "Liczba procesorow: " << num_proc << endl;
     int size = 5000;
     // Tworzenie macierzy
     double** matrixA = new double*[size];
